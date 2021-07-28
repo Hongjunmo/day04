@@ -9,9 +9,9 @@ public class Quiz01 {
 		  정상 25이상은 비만 으로 출력 -bmi계산법
 		 * (체중/(키*키)
 		 */
-
+		
 		Scanner scan = new Scanner(System.in);
-
+//
 		System.out.println("키 입력: ");
 		double hei= scan.nextDouble();
 		System.out.println("체중 입력: ");
@@ -19,12 +19,16 @@ public class Quiz01 {
 		double bmi = wei/((hei/100)*(hei/100));
 		
 		System.out.println(Math.round(bmi*100)/100.0);
+		if(bmi>=0) {
 		if(bmi <18.5) {
 			System.out.println("저체중 입니다");
 		}else if(bmi<25) {
 			System.out.println("정상입니다");
 		}else {
 			System.out.println("비만 입니다");
+		}
+		}else {
+			System.out.println("입력오류");
 		}
 
 //		System.out.println("국어 점수를 입력: ");
@@ -51,7 +55,10 @@ public class Quiz01 {
 //		}else {
 //			System.out.println("홀수 입니다");
 //		}
-//		System.out.println("몇월인지 입력:");
+		
+		
+		
+//		System.out.println("월 입력:");
 //		int num2 = scan.nextInt();
 //
 //		if(num2==12 || num2<=2) { // 12 1 2
